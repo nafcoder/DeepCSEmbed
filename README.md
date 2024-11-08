@@ -7,7 +7,7 @@
 ![s_linked_framework-1](https://github.com/user-attachments/assets/8a8e7894-188c-4478-8be9-37a0b362aa5e)
 
 ### Data availability
-All training and independent datasets are given in [Dataset](Dataset) folder
+All training and independent datasets are given in [Dataset](dataset) folder
 
 ### Environments
 OS: Pop!_OS 22.04 LTS
