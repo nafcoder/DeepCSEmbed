@@ -56,7 +56,7 @@ Protein_id,site_position_1,site_position_2,...,site_position_n
 Fasta
 ```
 
-2. For predicting C-linked glycosylation sites from a protein sequence, you need to run the [extractFeatures.py](c_linked/Prediction//extractFeatures.py) to generate features and then run [predict.py](c_linked/Prediction//predict.py) for prediction.
+2. For predicting C-linked glycosylation sites from a protein sequence, you need to run the [extractFeatures.py](c_linked/Prediction//extract_features.py) to generate features and then run [predict.py](c_linked/Prediction//predict.py) for prediction.
 
 ### S-linked glycosylation
 1. Firsly, you need to fillup [dataset.txt](s_linked/Prediction/dataset.txt). Follow the pattern shown below:
@@ -66,7 +66,7 @@ Protein_id,site_position_1,site_position_2,...,site_position_n
 Fasta
 ```
 
-2. For predicting S-linked glycosylation sites from a protein sequence, you need to run the [extractFeatures.py](s_linked/Prediction//extractFeatures.py) to generate features and then run [predict.py](s_linked/Prediction//predict.py) for prediction.
+2. For predicting S-linked glycosylation sites from a protein sequence, you need to run the [extractFeatures.py](s_linked/Prediction//extract_features.py) to generate features and then run [predict.py](s_linked/Prediction//predict.py) for prediction.
 
 ### Reproduce previous paper metrics for C-linked glycosylation
 In [Previous Paper codes](c_linked/prev_paper), scripts are provided for reproducing the results of the previous papers.
