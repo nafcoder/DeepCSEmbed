@@ -1,4 +1,4 @@
-# StackGlyEmbed
+# DeepCSEmbed
 
 ### Framework of DeepCSEmbed-C (C-linked glycosylation)
 ![c_linked_framework-1](https://github.com/user-attachments/assets/db0ae045-5a66-4317-b130-ec7722ef6e36)
