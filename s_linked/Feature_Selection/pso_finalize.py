@@ -72,7 +72,7 @@ plt.bar(labels, values, color='tomato')
 
 plt.title('Feature Selection by PSO [SVM (kernel = rbf)]')
 plt.xlabel('Feature groups')
-plt.ylabel('Contribution among the top 100 ranked')
+plt.ylabel('Contribution among the top 100 features')
 plt.tight_layout()
 plt.show()
 
