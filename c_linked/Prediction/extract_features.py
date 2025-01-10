@@ -98,11 +98,73 @@ with open('dataset.txt','r') as f, open('esm2.csv', 'w') as out:
     for j in range(1, len(splitter)):
       out.write(','.join([str(num) for num in features[int(splitter[j])]]) + '\n')
 
+window_size = 7
+mapper = {
+    'A': 0,
+    'R': 1,
+    'N': 2,
+    'D': 3,
+    'C': 4,
+    'Q': 5,
+    'E': 6,
+    'G': 7,
+    'H': 8,
+    'I': 9,
+    'L': 10,
+    'K': 11,
+    'M': 12,
+    'F': 13,
+    'P': 14,
+    'S': 15,
+    'T': 16,
+    'W': 17,
+    'Y': 18,
+    'V': 19,
+    '-': 20 # For padding
+}
+
+with open('dataset.txt','r') as f, open('word.csv', 'w') as out:
+  lines = f.readlines()
+
+  for i in range(0, len(lines), 2):
+    fasta = lines[i+1].strip()
+    splitter = lines[i].rstrip().split(',')
+    print(lines[i].rstrip().split(',')[0], i // 2 + 1)
+
+    targets = []
+    for j in range(1, len(splitter)):
+        targets.append([splitter[j]])
+    
+    for t in targets:
+      site_position = int(t[0]) + 1
+      start = (site_position - window_size - 1, 0)[(site_position - window_size - 1) < 0]
+      end = (site_position + window_size, len(fasta),)[site_position + window_size > len(fasta)]
+      cutout = fasta[start:end]
+
+      start_pad = site_position - window_size - 1
+      end_pad = site_position + window_size - len(fasta)
+
+      if start_pad < 0:
+          cutout = '-' * abs(start_pad) + cutout
+      if end_pad > 0:
+          cutout = cutout + '-' * end_pad
+      # print(cutout)
+      
+      embedding = []
+      for aa in cutout:
+          embedding += [mapper[aa]]
+      embedding = np.array(embedding)
+      # print(embedding.shape)
+      out.write(','.join(map(str, embedding)) + '\n')
+
 final1 = np.loadtxt('prott5.csv', delimiter=',', skiprows=0)
 final2 = np.loadtxt('esm2.csv', delimiter=',', skiprows=0)
+final3 = np.loadtxt('word.csv', delimiter=',', skiprows=0)
 if final1.ndim == 1:
   final1 = np.array([final1])
 if final2.ndim == 1:
   final2 = np.array([final2])
-final = np.concatenate((final1, final2), axis=1)
+if final3.ndim == 1:
+  final3 = np.array([final3])
+final = np.concatenate((final1, final2, final3), axis=1)
 np.savetxt('features.csv', final, delimiter=',')
