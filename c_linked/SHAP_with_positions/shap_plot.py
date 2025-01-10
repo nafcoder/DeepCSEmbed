@@ -38,9 +38,9 @@ plt.xticks(range(7), ['Closest 1 (6&8)', 'Closest 2 (5&9)', 'Closest 3 (4&10)', 
 plt.grid(True, axis='y', linestyle='--', alpha=0.7)
 
 # Add labels and title
-plt.xlabel('Neighbouring residues', fontsize=12, fontweight='bold')
-plt.ylabel('Absolute Averaged SHAP Values', fontsize=12, fontweight='bold')
-plt.title('Absolute Averaged SHAP Values vs Neighbouring residues', fontsize=14, fontweight='bold')
+plt.xlabel('Neighbouring residues', fontsize=12)
+plt.ylabel('Averaged absolute SHAP values', fontsize=12)
+plt.title('Averaged absolute SHAP values vs Neighbouring residues', fontsize=14)
 
 # Adjust the layout for better spacing
 plt.tight_layout()
