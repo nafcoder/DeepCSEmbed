@@ -32,7 +32,7 @@ plt.figure(figsize=(10, 6))
 bars = plt.bar(range(7), neighbours, color='skyblue', edgecolor='black', linewidth=1.2)
 
 # Customize the ticks
-plt.xticks(range(7), ['Closest 1 (6&7)', 'Closest 2 (5&8)', 'Closest 3 (4&9)', 'Closest 4 (3&10)', 'Closest 5 (2&11)', 'Closest 6 (1&12)', 'Closest 7 (0&13)'], rotation=45, ha='right')
+plt.xticks(range(7), ['Closest 1 (6&8)', 'Closest 2 (5&9)', 'Closest 3 (4&10)', 'Closest 4 (3&11)', 'Closest 5 (2&12)', 'Closest 6 (1&13)', 'Closest 7 (0&14)'], rotation=45, ha='right')
 
 # Add grid for readability
 plt.grid(True, axis='y', linestyle='--', alpha=0.7)
