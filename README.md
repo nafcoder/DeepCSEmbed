@@ -1,7 +1,10 @@
 # DeepCSEmbed
 
-### Framework of DeepCSEmbed-C (C-linked glycosylation)
-![c_linked_framework-1](https://github.com/user-attachments/assets/db0ae045-5a66-4317-b130-ec7722ef6e36)
+### Architecture of InceptionModule (C-linked glycosylation)
+![InceptionModule-1](https://github.com/user-attachments/assets/356432f2-7297-4496-9b49-9cedd1fde23f)
+
+### Model architecture of DeepCSEmbed-C (C-linked glycosylation)
+![c_linked_framewok-1](https://github.com/user-attachments/assets/dd7addd0-e4f1-42f5-901a-3b2fcaf9bbd2)
 
 ### Framework of DeepCSEmbed-S (S-linked glycosylation)
 ![s_linked_framework-1](https://github.com/user-attachments/assets/8a8e7894-188c-4478-8be9-37a0b362aa5e)
