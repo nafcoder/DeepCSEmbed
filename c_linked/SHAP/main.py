@@ -238,7 +238,7 @@ df = pd.DataFrame({
 
 shap_values.values = df.values
 
-shap_values.feature_names = ['ProtT5-XL-U50', 'ESM-2']
+shap_values.feature_names = ['ProtT5-XL-U50 (1024)', 'ESM-2 (1280)']
 
 print(shap_values.values.shape)
 print(shap_values.data.shape)

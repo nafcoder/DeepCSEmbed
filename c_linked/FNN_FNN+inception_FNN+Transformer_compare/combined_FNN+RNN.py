@@ -261,25 +261,24 @@ for epoch in range(25):
         gradient_norm = torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
         
         # Print gradient norm
-        print("Gradient norm:", gradient_norm)
+        # print("Gradient norm:", gradient_norm)
 
         optimizer.step()
         optimizer.zero_grad()
 
         with torch.no_grad():
-            print(f'Epoch [{epoch + 1}/{50}], Step [{i + 1}/{len(train_dataloader)}]')
+            print(f'Epoch [{epoch + 1}/{25}], Step [{i + 1}/{len(train_dataloader)}]')
 
 
 print("Training finished.")
 
-file = f'Model_LSTM.pth'
+file = f'Model_RNN.pth'
 torch.save(model, file)
 
 X_test = feature_X_Benchmark_embeddings_test
 y_test = feature_y_Benchmark_embeddings_test
 
-
-model = torch.load('Model_LSTM.pth')
+model = torch.load('Model_RNN.pth')
 model.eval()
 
 with torch.no_grad():

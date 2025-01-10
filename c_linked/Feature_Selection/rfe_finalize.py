@@ -85,6 +85,7 @@ plt.bar(labels, values, color='skyblue')
 plt.title('Feature Selection by RFE (XGB)')
 plt.xlabel('Feature groups')
 plt.ylabel('Contribution among the top 100 ranked')
+plt.tight_layout()
 
 plt.show()
 
